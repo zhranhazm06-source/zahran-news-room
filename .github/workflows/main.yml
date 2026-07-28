@@ -1,12 +1,12 @@
-name: Zahran News Monitor
+name: ZAHRAN NEWS BOT
 
 on:
   schedule:
-    - cron: "0 */3 * * *"
+    - cron: "0 */2 * * *"
   workflow_dispatch:
 
 jobs:
-  monitor:
+  run-bot:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,5 +23,8 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Bot
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
         run: |
           python main.py
