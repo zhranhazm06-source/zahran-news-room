@@ -1,0 +1,6 @@
+requests
+beautifulsoup4
+feedparser
+python-telegram-bot
+schedule
+lxml
