@@ -1,0 +1,4 @@
+BOT_TOKEN = ""
+CHAT_ID = ""
+
+CHECK_INTERVAL = 300
